@@ -16,8 +16,8 @@ class TMLBotPlugin(Star):
         """生产AI视频"""
         raw = event.message_str.removeprefix("[mm]AI视频").removeprefix("AI视频").strip()
         user_name = event.get_sender_name()
-        if raw is empty:
-            yield event.plain_result("请输入AI视频的描述")
+        if not raw:
+            yield event.plain_result("未检测到AI视频生成提示词，请补充")
             return
        
         logger.info(f"{user_name} 准备生成AI视频：{raw}")
