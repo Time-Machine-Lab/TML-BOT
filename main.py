@@ -11,8 +11,8 @@ from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
 class TMLBotPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
-        self.context = Context 
-        self.conf = AstrBotConfig
+        self.context = context 
+        self.conf = config
         self.modelMaster = None
         
     async def initialize(self):
