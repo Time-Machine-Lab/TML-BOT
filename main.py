@@ -1,6 +1,7 @@
 from astrbot.api.event import filter, AstrMessageEvent, MessageEventResult
 from astrbot.api.star import Context, Star, register
 from astrbot.api import logger
+from astrbot.core import AstrBotConfig
 from .core.handler.modelmaster_handle import ModelMasterHandler
 from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
     AiocqhttpMessageEvent,
@@ -8,11 +9,17 @@ from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
 
 @register("TML-Bot", "TML", "Just For TML", "1.0.0")
 class TMLBotPlugin(Star):
-    def __init__(self, context: Context):
+    def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
-
+        self.context = Context 
+        self.conf = config
+        self.modelMaster = None
+        
     async def initialize(self):
         self.modelMaster = ModelMasterHandler(self.context, self.conf)
+        logger.info("√ ModelMasterHandler 初始化完成")
+
+
 
     
     # ModelMaster
