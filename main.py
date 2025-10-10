@@ -9,8 +9,9 @@ from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
 
 @register("TML-Bot", "TML", "Just For TML", "1.0.0")
 class TMLBotPlugin(Star):
-    def __init__(self, context: Context, config: dict = None):
+    def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
+        logger.info(f"初始化TML-Bot插件，配置：{config}")
         self.context = context 
         self.config = config
         
