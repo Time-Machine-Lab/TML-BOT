@@ -9,13 +9,13 @@ from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
 
 @register("TML-Bot", "TML", "Just For TML", "1.0.0")
 class TMLBotPlugin(Star):
-    def __init__(self, context: Context, config: AstrBotConfig):
+    def __init__(self, context: Context, config: dict = None):
         super().__init__(context)
         self.context = context 
-        self.conf = config
+        self.config = config
         
     async def initialize(self):
-        self.modelMaster = ModelMasterHandler(self.context, self.conf)
+        self.modelMaster = ModelMasterHandler(self.context, self.config)
         logger.info("√ ModelMasterHandler 初始化完成")
 
 
