@@ -9,9 +9,9 @@ from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
 class ModelMasterHandler:
     def __init__(self, context: Context ,config: AstrBotConfig):
         self.context = context
-        self.conf = config
-        self.api_url = self.conf["mm_api_url"]
-        self.api_key = self.conf["mm_api_key"]
+        self.config = config
+        self.api_url = self.config["mm_api_url"]
+        self.api_key = self.config["mm_api_key"]
         self.headers = {
             "secret": f"{self.api_key}",
             "Content-Type": "application/json",

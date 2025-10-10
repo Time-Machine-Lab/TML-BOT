@@ -16,14 +16,13 @@ class TMLBotPlugin(Star):
         self.config = config
         
     async def initialize(self):
-        # self.modelMaster = ModelMasterHandler(self.context, self.config)
+        self.modelMaster = ModelMasterHandler(self.context, self.config)
         logger.info("√ ModelMasterHandler 初始化完成")
 
     # ModelMaster
     @filter.command("生成AI视频", desc="生成AI视频 xxxx")
     async def genAIVideo(self, event: AiocqhttpMessageEvent):
-        # await self.modelMaster.genAIVideo(event)
-        pass
+        await self.modelMaster.genAIVideo(event)
 
     @filter.command("测试", desc="测试一下")
     async def genAIPic(self, event: AiocqhttpMessageEvent):
