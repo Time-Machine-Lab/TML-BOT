@@ -7,7 +7,6 @@ from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
 )
 
 class ModelMasterHandler:
-
     def __init__(self, context: Context ,config: AstrBotConfig):
         self.context = context
         self.conf = config
