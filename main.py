@@ -13,7 +13,6 @@ class TMLBotPlugin(Star):
         super().__init__(context)
         self.context = context 
         self.conf = config
-        self.modelMaster = None
         
     async def initialize(self):
         self.modelMaster = ModelMasterHandler(self.context, self.conf)
