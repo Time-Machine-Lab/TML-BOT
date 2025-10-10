@@ -1,0 +1,21 @@
+{
+  "model_master_config": {
+     "description": "ModelMaster服务配置项",
+     "hint": "ModelMaster服务配置项",
+     "type": "object",
+     "items": {
+      "mm_api_url": {
+        "description": "ModelMaster API 链接",
+        "hint": "ModelMaster API 链接",
+        "type": "string",
+        "default": "ai.tmlab.top:8080"
+      },
+      "mm_api_key": {
+        "description": "ModelMaster BOT API Key",
+        "hint": "需要提供ModelMaster BOT API Key",
+        "type": "string",
+        "default": ""
+      }
+    }
+  }
+}
