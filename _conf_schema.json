@@ -8,7 +8,7 @@
         "description": "ModelMaster API 链接",
         "hint": "ModelMaster API 链接",
         "type": "string",
-        "default": "ai.tmlab.top:8080"
+        "default": "http://ai.tmlab.top:8080"
       },
       "mm_api_key": {
         "description": "ModelMaster BOT API Key",
