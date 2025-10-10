@@ -7,7 +7,7 @@ from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
     AiocqhttpMessageEvent,
 )
 
-@register("TML-Bot", "TML", "Just For TML", "1.0.0")
+@register("TML-Bot", "TML", "Just For TML", "...", "...")
 class TMLBotPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
@@ -16,13 +16,14 @@ class TMLBotPlugin(Star):
         self.config = config
         
     async def initialize(self):
-        self.modelMaster = ModelMasterHandler(self.context, self.config)
+        # self.modelMaster = ModelMasterHandler(self.context, self.config)
         logger.info("√ ModelMasterHandler 初始化完成")
 
     # ModelMaster
     @filter.command("生成AI视频", desc="生成AI视频 xxxx")
     async def genAIVideo(self, event: AiocqhttpMessageEvent):
-        await self.modelMaster.genAIVideo(event)
+        # await self.modelMaster.genAIVideo(event)
+        pass
 
     @filter.command("测试", desc="测试一下")
     async def genAIPic(self, event: AiocqhttpMessageEvent):
