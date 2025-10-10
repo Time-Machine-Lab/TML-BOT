@@ -12,7 +12,7 @@ class TMLBotPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
         self.context = Context 
-        self.conf = config
+        self.conf = AstrBotConfig
         self.modelMaster = None
         
     async def initialize(self):
