@@ -1,7 +1,7 @@
 from astrbot.api.event import filter, AstrMessageEvent, MessageEventResult
 from astrbot.api.star import Context, Star, register
 from astrbot.api import logger
-from .core.handler import ModelMasterHandler
+from .core.handler.modelmaster_handle import ModelMasterHandler
 from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
     AiocqhttpMessageEvent,
 )
